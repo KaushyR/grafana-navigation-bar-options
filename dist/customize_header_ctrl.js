@@ -100,6 +100,11 @@ System.register(['app/plugins/sdk', 'lodash'], function (_export, _context) {
             this.render();
           }
         }, {
+          key: 'showNavBar',
+          value: function showNavBar() {
+            return this.panel.tvMode.dashboardTitle || this.panel.tvMode.actionButtons || this.panel.tvMode.cycleViewButton || this.panel.tvMode.datePicker || this.panel.tvMode.timeRangeZoomButton || this.panel.tvMode.refreshButton || this.panel.kioskMode.dashboardTitle || this.panel.kioskMode.actionButtons || this.panel.kioskMode.cycleViewButton || this.panel.kioskMode.datePicker || this.panel.kioskMode.timeRangeZoomButton || this.panel.kioskMode.refreshButton || false;
+          }
+        }, {
           key: 'onInitEditMode',
           value: function onInitEditMode() {
             this.addEditorTab('Customize Header', 'public/plugins/grafana-navigation-bar-options/partials/editor.html', 2);

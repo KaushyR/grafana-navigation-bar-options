@@ -1,6 +1,6 @@
 {
   "name": "grafana-navigation-bar-options",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A panel which outputs custom css which show/hides items in the header",
   "main": "src/module.js",
   "scripts": {

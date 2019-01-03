@@ -2,6 +2,14 @@
 
 <p>Grafana customized header is active</p>
 <style type="text/css">
+  .view-mode--kiosk .scroll-canvas--dashboard{
+    height:90%
+  }
+
+  .view-mode--kiosk .navbar {
+    display: {{ctrl.showNavBar()?'flex':'none'}}
+  }
+
   .view-mode--kiosk panel-plugin-grafana-navigation-bar-options div {
     display: {{ctrl.panel.kioskMode.pluginPanel?'flex':'none'}};
   }

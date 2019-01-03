@@ -35,6 +35,6 @@ export class CustomizeHeaderCtrl extends PanelCtrl {
   }
 
   onInitEditMode() {
-    this.addEditorTab('Customize Header', 'public/plugins/grafana-customize-header/partials/editor.html', 2);
+    this.addEditorTab('Customize Header', 'public/plugins/grafana-navigation-bar-options/partials/editor.html', 2);
   }
 }

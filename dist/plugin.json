@@ -1,0 +1,24 @@
+{
+  "type": "panel",
+  "name": "Navigation Bar Control Options",
+  "id": "grafana-navigation-bar-options",
+
+  "info": {
+    "description": "A panel which outputs custom css which show/hides items in the header.",
+    "author": {
+      "name": "Kaushalya Rathnayake",
+      "url": "https://github.com/kaushyr/grafana-navigation-bar-options"
+    },
+    "keywords": ["header", "customize", "kiosk mode", "tv mode"],
+    "links": [
+      {"name": "Project site", "url": "https://github.com/kaushyr/grafana-navigation-bar-options"}
+    ],
+    "version": "1.0.0",
+    "updated": "2019-01-02"
+  },
+
+  "dependencies": {
+    "grafanaVersion": "3.x.x",
+    "plugins": [ ]
+  }
+}

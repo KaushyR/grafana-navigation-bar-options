@@ -102,7 +102,7 @@ System.register(['app/plugins/sdk', 'lodash'], function (_export, _context) {
         }, {
           key: 'onInitEditMode',
           value: function onInitEditMode() {
-            this.addEditorTab('Customize Header', 'public/plugins/grafana-customize-header/partials/editor.html', 2);
+            this.addEditorTab('Customize Header', 'public/plugins/grafana-navigation-bar-options/partials/editor.html', 2);
           }
         }]);
 

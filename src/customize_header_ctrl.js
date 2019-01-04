@@ -24,10 +24,22 @@ const panelDefaults = {
 export class CustomizeHeaderCtrl extends PanelCtrl {
   static templateUrl = 'module.html';
 
-  constructor($scope, $injector, contextSrv, datasourceSrv, variableSrv) {
+  constructor($scope, $injector, $routeParams, $window, contextSrv, datasourceSrv, variableSrv) {
     super($scope, $injector);
     _.defaults(this.panel, panelDefaults);
     this.events.on('init-edit-mode', this.onInitEditMode.bind(this));
+    
+    $scope.$on('$locationChangeSuccess', function($event, next, current) { 
+      if($routeParams['kiosk']){
+        $window.Mousetrap.bind('esc', function() { 
+          console.log("Mode change by ESC key is disabled"); 
+        });
+      }else {
+        $window.Mousetrap.unbind('esc');
+      }
+    });
+
+    
   }
 
   updatePanel() {

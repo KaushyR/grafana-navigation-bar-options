@@ -78,19 +78,29 @@ System.register(['app/plugins/sdk', 'lodash'], function (_export, _context) {
           datePicker: true,
           timeRangeZoomButton: true,
           refreshButton: true
-        }
+        },
+        disableEscInKioskMode: true
       };
 
       _export('CustomizeHeaderCtrl', CustomizeHeaderCtrl = function (_PanelCtrl) {
         _inherits(CustomizeHeaderCtrl, _PanelCtrl);
 
-        function CustomizeHeaderCtrl($scope, $injector, contextSrv, datasourceSrv, variableSrv) {
+        function CustomizeHeaderCtrl($scope, $injector, $routeParams, $window, contextSrv, datasourceSrv, variableSrv) {
           _classCallCheck(this, CustomizeHeaderCtrl);
 
           var _this = _possibleConstructorReturn(this, (CustomizeHeaderCtrl.__proto__ || Object.getPrototypeOf(CustomizeHeaderCtrl)).call(this, $scope, $injector));
 
           _.defaults(_this.panel, panelDefaults);
           _this.events.on('init-edit-mode', _this.onInitEditMode.bind(_this));
+          var currentPanel = _this.panel;
+          $scope.$on('$locationChangeSuccess', function ($event, next, current) {
+            if ($routeParams['kiosk'] && currentPanel.disableEscInKioskMode) {
+              $window.Mousetrap.bind('esc', function () {
+                console.log("Mode change by ESC key is disabled in panel settings");
+              });
+            }
+          });
+
           return _this;
         }
 

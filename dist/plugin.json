@@ -13,8 +13,8 @@
     "links": [
       {"name": "Project site", "url": "https://github.com/kaushyr/grafana-navigation-bar-options"}
     ],
-    "version": "1.0.1",
-    "updated": "2019-01-02"
+    "version": "1.0.3",
+    "updated": "2019-01-04"
   },
 
   "dependencies": {
